@@ -57,4 +57,9 @@
     align-items: center;
     justify-content: center;
   }
+
+  /* sidebar */
+  #sidebar {
+    min-width: 90px !important;
+  }
 }
