@@ -9,7 +9,7 @@
     --tab-min-height: 24px !important;
     --tab-block-margin: 1px !important;
     --urlbar-min-height: 24px !important; 
-    --toolbarbutton-inner-padding: 4px !important;
+    --toolbarbutton-inner-padding: 2px !important;
   }
   :root[tabsintitlebar][sizemode="normal"] #titlebar,
   :root[tabsintitlebar][sizemode="maximized"] #titlebar {
@@ -22,6 +22,12 @@
 
   .tabbrowser-tab {
     min-height: auto !important;
+  }
+
+  .tab-close-button {
+    width: calc(var(--tab-min-height) - 2 * var(--tab-block-margin)) !important;
+    height: calc(var(--tab-min-height) - 2 * var(--tab-block-margin)) !important;
+    padding: var(--toolbarbutton-inner-padding) !important;
   }
 
   #TabsToolbar {
