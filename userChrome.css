@@ -19,6 +19,10 @@
     appearance: none !important;
   }
 
+  :root[uidensity="compact"] #TabsToolbar {
+    --tab-min-height: 24px !important;
+  }
+
   .tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]) {
     max-width: none !important;
   }
@@ -98,5 +102,15 @@
   /* bookmark */
   #PersonalToolbar {
     padding-inline: 0px !important;
+  }
+
+  /* 縦タブ最適 */
+  :root[uidensity="compact"] #TabsToolbar > .titlebar-buttonbox-container {
+    height: 26px !important;
+  }
+
+  #nav-bar {
+    border-inline: var(--tab-min-height, 0px) solid var(--toolbar-bgcolor) !important;
+    border-right-width: calc(36px * 3 + var(--tab-min-height, 0px)) !important;
   }
 }
