@@ -1,32 +1,102 @@
-/*************************************************************************************************************************************************************************************************************************************************************
-
-userChrome.cssは、スタイルシートであり、Floorp のユーザーインターフェースに適用され、デフォルトの Floorp のスタイルルールをオーバーライドできます。 残念ながら、userChrome.cssを使用して Floorp の機能操作を変更することはできません。
-
-userChrome.cssファイルを作成し、スタイルルールを追加すると、フォントや色を変更したり、不要なアイテムを非表示にしたり、間隔を調整したり、Firefoxの外観を変更したりできます。
-
-タブバーを削除する
-******************************************
-#tabbrowser-tabs{
-  display: none;
-}
-
-******************************************
-このように、要素の非表示などを行うことができます。自分が気に入らない要素を非表示にできるので、とても便利です。ネットにはこの実装例が公開されていることがあります。
-
-また、userChrome.css はブラウザーのツールバーに適用する CSS のことを指し、userContent.css はブラウザー内部サイトに対して CSS を適用できます。
-詳しくは、同じディレクトリに存在するファイルを参照してください
-
-NOTE:適用に、about:config の操作は不要です。
-
-参考: https://userChrome.org | https://github.com/topics/userchrome 
-Ctrl+Alt+Shift+I
-
-************************************************************************************************************************************************************************************************************************************************************/
+/*
+  Ctrl+Alt+Shift+I
+*/
 
 @charset "UTF-8";
 @-moz-document url(chrome://browser/content/browser.xhtml) {
 /*この下にCSSを書いてください*/
+  :root {
+    --tab-min-height: 24px !important;
+    --tab-block-margin: 1px !important;
+    --urlbar-min-height: 24px !important; 
+    --toolbarbutton-inner-padding: 2px !important;
+    --inline-tab-padding: 2px !important;
+    --bookmark-block-padding: 0px !important;
+  }
+
+  :root[tabsintitlebar][sizemode="normal"] #titlebar,
+  :root[tabsintitlebar][sizemode="maximized"] #titlebar {
+    appearance: none !important;
+  }
+
   .tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]) {
     max-width: none !important;
+  }
+
+  .tabbrowser-tab {
+    min-height: auto !important;
+  }
+
+  .tab-close-button {
+    width: calc(var(--tab-min-height) - 2 * var(--tab-block-margin)) !important;
+    height: calc(var(--tab-min-height) - 2 * var(--tab-block-margin)) !important;
+    padding: var(--toolbarbutton-inner-padding) !important;
+  }
+
+  #TabsToolbar {
+    --toolbarbutton-inner-padding: calc(var(--tab-min-height) / 6 - var(--tab-block-margin)) !important;
+  }
+
+  .titlebar-spacer[type="pre-tabs"],
+  .titlebar-spacer[type="post-tabs"] {
+    width: var(--tab-min-height) !important;
+  }
+
+  #urlbar-container {
+    --urlbar-container-height: var(--urlbar-min-height) !important;
+  }
+
+  #urlbar {
+    --urlbar-height: var(--urlbar-min-height) !important;
+    --urlbar-toolbar-height: var(--urlbar-height) !important;
+    --urlbar-icon-padding: 2px !important;
+  }
+
+  .titlebar-spacer {
+    max-height: var(--tab-min-height);
+  }
+
+  @media (-moz-windows-compositor) {
+    @media not (-moz-platform: windows-win7) {
+      @media not (-moz-platform: windows-win8) {
+        .titlebar-button {
+          padding: calc(var(--tab-min-height) / 8) calc(var(--tab-min-height) / 2) !important;
+        }
+      }
+    }
+  }
+
+  .urlbar-page-action, #urlbar-go-button, .search-go-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* sidebar */
+  #sidebar {
+    min-width: 24px !important;
+  }
+
+  #sidebar-throbber, #sidebar-header > spacer, #sidebar-close, #sidebar-title, #sidebar-switcher-arrow {
+    display:none;
+  }
+
+  #sidebar-header {
+    padding: 1px !important;
+  }
+
+  #sidebar-box[sidebarcommand$="-sidebar-action"] > #sidebar-header > #sidebar-switcher-target > #sidebar-icon {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  #sidebar-switcher-target {
+    margin-inline-end: 0px !important;
+    padding: 0px 0px !important;
+  }
+
+  /* bookmark */
+  #PersonalToolbar {
+    padding-inline: 0px !important;
   }
 }
