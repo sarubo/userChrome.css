@@ -102,11 +102,11 @@
   /* bookmark */
   #PersonalToolbar {
     padding-inline: 0px !important;
+    transition: none !important;
   }
 
   #navigator-toolbox:hover > #PersonalToolbar {
-    transition: all 0ms !important;
-    transition-delay: 0.0s !important;
+    transition: none !important;
     min-height: var(--tab-min-height) !important;
     max-height: var(--tab-min-height) !important;
   }
