@@ -104,6 +104,13 @@
     padding-inline: 0px !important;
   }
 
+  #navigator-toolbox:hover > #PersonalToolbar {
+    transition: all 0ms !important;
+    transition-delay: 0.0s !important;
+    min-height: var(--tab-min-height) !important;
+    max-height: var(--tab-min-height) !important;
+  }
+
   /* 縦タブ最適 */
   :root[uidensity="compact"] #TabsToolbar > .titlebar-buttonbox-container {
     height: 26px !important;
