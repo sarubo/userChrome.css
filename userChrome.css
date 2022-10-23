@@ -73,16 +73,16 @@
   }
 
   /* sidebar */
-  #sidebar {
-    min-width: 24px !important;
-  }
-
   #sidebar-throbber, #sidebar-header > spacer, #sidebar-close, #sidebar-title, #sidebar-switcher-arrow {
     display: none;
   }
 
   #sidebar-header {
     padding: 1px !important;
+  }
+
+  #sidebar-box {
+    min-width: 24px !important;
   }
 
   #sidebar-box[sidebarcommand$="-sidebar-action"] > #sidebar-header > #sidebar-switcher-target > #sidebar-icon {
