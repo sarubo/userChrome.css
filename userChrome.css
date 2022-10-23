@@ -12,6 +12,8 @@
     --toolbarbutton-inner-padding: 2px !important;
     --inline-tab-padding: 2px !important;
     --bookmark-block-padding: 0px !important;
+    --wide-tab-width: 24px !important;
+    --sidepanel-icon-height-width: 26px;
   }
 
   :root[tabsintitlebar][sizemode="normal"] #titlebar,
@@ -19,7 +21,7 @@
     appearance: none !important;
   }
 
-  :root[uidensity="compact"] #TabsToolbar {
+  :root:not([uidensity]) #TabsToolbar {
     --tab-min-height: 24px !important;
   }
 
@@ -39,6 +41,20 @@
 
   #TabsToolbar {
     --toolbarbutton-inner-padding: calc(var(--tab-min-height) / 6 - var(--tab-block-margin)) !important;
+  }
+
+  #tabs-newtab-button > .toolbarbutton-icon {
+    margin-left: 0px !important;
+    --toolbarbutton-inner-padding: calc(var(--tab-min-height) / 6 - var(--tab-block-margin)) !important;
+  }
+
+  toolbar .toolbarbutton-1 > .toolbarbutton-icon {
+    width: calc(var(--tab-min-height) - 2 * var(--tab-block-margin)) !important;
+    height: calc(var(--tab-min-height) - 2 * var(--tab-block-margin)) !important;
+  }
+
+  #toolbar-menubar[autohide="true"] > .titlebar-buttonbox-container, #TabsToolbar > .titlebar-buttonbox-container {
+    height: var(--tab-min-height) !important;
   }
 
   .titlebar-spacer[type="pre-tabs"],
@@ -99,6 +115,20 @@
     padding: 0px 0px !important;
   }
 
+  /* #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
+    transition: none !important;
+    min-width: 75px !important;
+    max-width: 75px !important;
+  }
+
+  #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover {
+    transition: none !important;
+    transition-delay: 0s !important;
+    min-width: 20em !important;
+    max-width: 20em !important;
+    margin: 0px !important;
+  } */
+
   /* bookmark */
   #PersonalToolbar {
     padding-inline: 0px !important;
@@ -119,5 +149,61 @@
   #nav-bar {
     border-inline: var(--tab-min-height, 0px) solid var(--toolbar-bgcolor) !important;
     border-right-width: calc(36px * 3 + var(--tab-min-height, 0px)) !important;
+  }
+
+  /* sidebar-select-box */
+  #sidebar-select-box {
+    /* resize: horizontal;
+    overflow: auto; */
+    border: 0px !important;
+    width: var(--sidepanel-icon-height-width) !important;
+    max-width: var(--sidepanel-icon-height-width) !important;
+    min-width: var(--sidepanel-icon-height-width) !important;
+  }
+
+  .sidepanel-icon {
+    height: var(--sidepanel-icon-height-width) !important;
+    max-height: var(--sidepanel-icon-height-width) !important;
+    min-height: var(--sidepanel-icon-height-width) !important;
+    margin: 0px !important;
+    padding: 2px !important;
+    padding-left: 2px !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+  }
+
+  .sidepanel-icon >.toolbarbutton-text {
+    display: none !important;
+  }
+
+  .toolbarbutton-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  #sidebar2-back, #sidebar2-forward, #sidebar2-reload, #sidebar2-header > spacer {
+    display: none !important;
+  }
+
+  #sidebar2-header {
+    min-height: var(--sidepanel-icon-height-width) !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: right !important;
+  }
+
+  #sidebar-icon {
+    margin: 0px !important;
+  }
+
+  .close-icon {
+    padding: 2px;
+    width: var(--sidepanel-icon-height-width) !important;
+    height: var(--sidepanel-icon-height-width) !important;
+  }
+
+  #sidebar2 {
+    min-width: 0px !important;
   }
 }
