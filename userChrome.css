@@ -36,6 +36,10 @@
     width: calc(var(--tab-min-height) + 22px) !important;
   }
 
+  .tab-label-container {
+    padding-left: 4px;
+  }
+
   .tab-loading-burst[pinned] {
     min-height: calc(var(--tab-min-height) - 2 * var(--tab-block-margin)) !important;
   }
