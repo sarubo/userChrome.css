@@ -25,6 +25,7 @@
 
   .tabbrowser-tab {
     min-height: auto !important;
+    padding: 0px !important;
   }
 
   .tabbrowser-tab[selected]:not([pinned]) {
