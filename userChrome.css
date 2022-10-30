@@ -27,10 +27,36 @@
     min-height: auto !important;
   }
 
+  .tabbrowser-tab[selected]:not([pinned]) {
+    min-width: calc(var(--tab-min-height) + 22px) !important;
+  }
+
+  .tabbrowser-tab:not([pinned]) {
+    --tab-min-width: calc(var(--tab-min-height)) !important;
+    width: calc(var(--tab-min-height) + 22px) !important;
+  }
+
+  .tab-loading-burst[pinned] {
+    min-height: calc(var(--tab-min-height) - 2 * var(--tab-block-margin)) !important;
+  }
+
+  .tab-throbber:not([pinned]),
+  .tab-icon-pending:not([pinned]),
+  .tab-icon-image:not([pinned]),
+  .tab-sharing-icon-overlay:not([pinned]),
+  .tab-icon-overlay:not([pinned]) {
+    margin-inline-end: 0px !important;
+  }
+
   .tab-close-button {
     width: calc(var(--tab-min-height) - 2 * var(--tab-block-margin)) !important;
     height: calc(var(--tab-min-height) - 2 * var(--tab-block-margin)) !important;
     padding: var(--toolbarbutton-inner-padding) !important;
+    margin-inline-end: 0px !important;
+  }
+
+  :root:not([uidensity="compact"]) .tab-content[pinned] {
+    padding: 0 4px !important;
   }
 
   #TabsToolbar {
