@@ -5,6 +5,10 @@
 @charset "UTF-8";
 @-moz-document url(chrome://browser/content/browser.xhtml) {
 /*この下にCSSを書いてください*/
+  #main-window {
+    font-family: 'Noto Sans CJK JP' !important;
+  }
+
   :root {
     --tab-min-height: 24px !important;
     --tab-block-margin: 1px !important;
@@ -81,6 +85,11 @@
     --urlbar-height: var(--urlbar-min-height) !important;
     --urlbar-toolbar-height: var(--urlbar-height) !important;
     --urlbar-icon-padding: 2px !important;
+  }
+
+  #urlbar {
+    font-size: 1.25em !important;
+    font-family: 'HackGen Console';
   }
 
   .titlebar-spacer {
