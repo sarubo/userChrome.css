@@ -2,5 +2,8 @@
 
 @charset "UTF-8";
 @-moz-document url-prefix("about:newtab"), url-prefix("about:home") {
-  /*ここに CSS を書いていく*/
+
+}
+@-moz-document url("about:blank") {
+
 }
