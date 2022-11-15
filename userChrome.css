@@ -145,4 +145,39 @@
   #PersonalToolbar {
     padding-inline: 0px !important;
   }
+
+  /* 透過 */
+  /* aboout:config で layout.css.color-mix.enabled を true に */
+  #navigator-toolbox:-moz-window-inactive:-moz-lwtheme {
+    background-color: color-mix(in srgb, transparent 35%, var(--lwt-accent-color-inactive, var(--lwt-accent-color))) !important;
+  }
+
+  #navigator-toolbox:-moz-lwtheme {
+    background-color: color-mix(in srgb, transparent 35%, var(--lwt-accent-color)) !important;
+  }
+
+  #sidebar-box {
+    background-color: color-mix(in srgb, transparent 35%, var(--sidebar-background-color)) !important;
+  }
+
+  :root:not([lwtheme-image]) .browserContainer > findbar:-moz-lwtheme:-moz-window-inactive {
+    background-color: color-mix(in srgb, transparent 35%, var(--lwt-accent-color-inactive, var(--lwt-accent-color))) !important;
+  }
+
+  :root:not([lwtheme-image]) .browserContainer > findbar:-moz-lwtheme {
+    background-color: color-mix(in srgb, transparent 35%, var(--lwt-accent-color)) !important;
+  }
+}
+@-moz-document
+url(chrome://browser/content/places/bookmarksSidebar.xhtml),
+url(chrome://browser/content/places/historySidebar.xhtml) {
+  .sidebar-panel[lwt-sidebar] {
+    background-color: transparent !important;
+  }
+}
+
+@-moz-document url(chrome://browser/content/syncedtabs/sidebar.xhtml) {
+  body[lwt-sidebar] {
+    background-color: transparent !important;
+  }
 }

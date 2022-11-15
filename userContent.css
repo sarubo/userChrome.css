@@ -1,0 +1,6 @@
+/* urlbar で 打ち込んで表示されるもののみ */
+
+@charset "UTF-8";
+@-moz-document url-prefix("about:newtab"), url-prefix("about:home") {
+  /*ここに CSS を書いていく*/
+}
