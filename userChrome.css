@@ -166,6 +166,13 @@
     background-color: color-mix(in srgb, transparent 35%, var(--toolbar-field-background-color)) !important;
   }
 
+  .urlbarView-row:not([type="tip"], [type="dynamic"])[selected] > .urlbarView-row-inner,
+  .urlbarView-row-inner[selected],
+  .urlbarView-row[dynamicType="quickactions"] .urlbarView-quickaction-row[selected],
+  .searchbar-engine-one-off-item[selected] {
+    background-color: color-mix(in srgb, transparent 75%, var(--autocomplete-popup-highlight-background)) !important;
+  }
+
   #navigator-toolbox:-moz-window-inactive:-moz-lwtheme {
     background-color: color-mix(in srgb, transparent 35%, var(--lwt-accent-color-inactive, var(--lwt-accent-color))) !important;
   }
