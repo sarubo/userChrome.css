@@ -148,8 +148,10 @@
 
   /* 透過 */
   /* aboout:config で layout.css.color-mix.enabled を true に */
-  :root {
-    background-color: transparent !important;
+  @media not (-moz-platform: windows){
+    :root {
+      background-color: transparent !important;
+    }
   }
 
   #tabbrowser-tabpanels {
