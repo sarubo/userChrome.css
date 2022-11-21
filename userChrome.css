@@ -160,7 +160,7 @@
   }
 
   #tabbrowser-tabpanels {
-    background-color: transparent !important;
+    background-color: color-mix(in srgb, transparent 35%, var(--lwt-accent-color)) !important;
   }
 
   #urlbar:is([focused="true"], [open]) > #urlbar-background, #searchbar:focus-within {
