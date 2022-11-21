@@ -9,6 +9,12 @@
     font-family: 'Noto Sans CJK JP' !important;
   }
 
+  @media (-moz-platform: windows) {
+    #main-window {
+      font-size: 14px !important;
+    }
+  }
+
   :root {
     --tab-min-height: 24px !important;
     --tab-block-margin: 1px !important;
@@ -92,8 +98,13 @@
   }
 
   #urlbar {
-    font-size: 1.25em !important;
-    font-family: 'HackGen Console';
+    font-family: 'HackGen Console' !important;
+  }
+
+  @media (-moz-platform: windows) {
+    #urlbar {
+      font-size: 18px !important;
+    }
   }
 
   .titlebar-spacer {
