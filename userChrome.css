@@ -68,6 +68,10 @@
     padding: 0 4px !important;
   }
 
+  .tab-label-container[pinned] {
+    display: none !important;
+  }
+
   #TabsToolbar {
     --toolbarbutton-inner-padding: calc(var(--tab-min-height) / 6 - var(--tab-block-margin)) !important;
   }
