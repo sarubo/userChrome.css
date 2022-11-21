@@ -213,11 +213,13 @@ url(chrome://browser/content/places/bookmarksSidebar.xhtml),
 url(chrome://browser/content/places/historySidebar.xhtml) {
   .sidebar-panel[lwt-sidebar] {
     background-color: transparent !important;
+    font-family: 'Noto Sans CJK JP' !important;
   }
 }
 
 @-moz-document url(chrome://browser/content/syncedtabs/sidebar.xhtml) {
   body[lwt-sidebar] {
     background-color: transparent !important;
+    font-family: 'Noto Sans CJK JP' !important;
   }
 }
