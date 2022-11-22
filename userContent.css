@@ -1,9 +1,24 @@
 /* urlbar で 打ち込んで表示されるもののみ */
 
 @charset "UTF-8";
-@-moz-document url-prefix("about:newtab"), url-prefix("about:home") {
+@-moz-document
+url-prefix("about:newtab"),
+url-prefix("about:home") {
+  body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("./image/wallpaper.png");
+  }
 
-}
-@-moz-document url("about:blank") {
-
+  .search-wrapper .search-handoff-button,
+  .search-wrapper input {
+    background-color: color-mix(in srgb, transparent 35%, var(--newtab-background-color-secondary)) !important;
+    border: 1px solid var(--newtab-background-color-secondary) !important;
+  }
 }
