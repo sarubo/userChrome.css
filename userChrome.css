@@ -7,12 +7,7 @@
 /*この下にCSSを書いてください*/
   #main-window {
     font-family: 'Noto Sans CJK JP' !important;
-  }
-
-  @media (-moz-platform: windows) {
-    #main-window {
-      font-size: 14px !important;
-    }
+    font-size: 14px !important;
   }
 
   :root {
@@ -99,12 +94,7 @@
 
   #urlbar {
     font-family: 'HackGen Console' !important;
-  }
-
-  @media (-moz-platform: windows) {
-    #urlbar {
-      font-size: 18px !important;
-    }
+    font-size: 18px !important;
   }
 
   .titlebar-spacer {
@@ -170,7 +160,7 @@
   }
 
   #tabbrowser-tabpanels {
-    background-color: transparent !important;
+    background-color: color-mix(in srgb, transparent 35%, var(--lwt-accent-color)) !important;
   }
 
   #urlbar:is([focused="true"], [open]) > #urlbar-background, #searchbar:focus-within {
