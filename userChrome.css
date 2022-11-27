@@ -117,6 +117,24 @@
     justify-content: center;
   }
 
+  /* search bar */
+  findbar {
+    padding-block: 0px !important;
+  }
+
+  .findbar-textbox {
+    padding: 0px !important;
+  }
+
+  .close-icon.findbar-closebutton {
+    margin: 0px 2px !important;
+    width: 24px !important;
+  }
+
+  .findbar-container {
+    height: 24px !important;
+  }
+
   /* sidebar */
   #sidebar-throbber, #sidebar-header > spacer, #sidebar-close, #sidebar-title, #sidebar-switcher-arrow {
     display: none;
