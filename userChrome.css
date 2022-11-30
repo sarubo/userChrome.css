@@ -58,6 +58,13 @@
     margin-inline-end: 0px !important;
   }
 
+  .tab-label {
+    font-weight: bold;
+  }
+  .tab-label[attention]:not([selected="true"]) {
+    font-style: italic;
+  }
+
   .tab-close-button {
     width: calc(var(--tab-min-height) - 2 * var(--tab-block-margin)) !important;
     height: calc(var(--tab-min-height) - 2 * var(--tab-block-margin)) !important;
