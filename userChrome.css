@@ -6,7 +6,7 @@
 @-moz-document url(chrome://browser/content/browser.xhtml) {
 /*この下にCSSを書いてください*/
   #main-window {
-    font-family: 'Noto Sans CJK JP' !important;
+    font-family: sans-serif !important;
     font-size: 14px !important;
   }
 
@@ -238,13 +238,13 @@ url(chrome://browser/content/places/bookmarksSidebar.xhtml),
 url(chrome://browser/content/places/historySidebar.xhtml) {
   .sidebar-panel[lwt-sidebar] {
     background-color: transparent !important;
-    font-family: 'Noto Sans CJK JP' !important;
+    font-family: sans-serif !important;
   }
 }
 
 @-moz-document url(chrome://browser/content/syncedtabs/sidebar.xhtml) {
   body[lwt-sidebar] {
     background-color: transparent !important;
-    font-family: 'Noto Sans CJK JP' !important;
+    font-family: sans-serif !important;
   }
 }
