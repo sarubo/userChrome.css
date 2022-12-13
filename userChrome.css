@@ -149,18 +149,22 @@
     height: 26px !important;
   }
 
-
+  /* 最大化 */
   #main-window[sizemode="maximized"] #nav-bar {
     border-inline: 0px solid var(--toolbar-bgcolor) !important;
+  }
+  /* 最大化最適化 */
+  #main-window[sizemode="maximized"] #toolbar-menubar ~ #nav-bar {
     border-right-width: calc(36px * 3 + var(--tab-min-height, 0px)) !important;
   }
-  #nav-bar {
-    border-inline: var(--tab-min-height, 0px) solid var(--toolbar-bgcolor) !important;
-  }
+  /* 最適化 */
   #toolbar-menubar ~ #nav-bar {
+    border-inline: var(--tab-min-height, 0px) solid var(--toolbar-bgcolor) !important;
     border-right-width: calc(36px * 3 + var(--tab-min-height, 0px)) !important;
   }
+  /* デフォルト */
   #nav-bar {
+    border-inline: 0px solid var(--toolbar-bgcolor) !important;
     border-right-width: 0px !important;
   }
 
