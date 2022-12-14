@@ -147,6 +147,18 @@
     height: 24px !important;
   }
 
+  .findbar-find-previous {
+    margin-inline: 0px 0 !important;
+  }
+
+  .findbar-find-next {
+    margin-inline-end: 0px !important;
+  }
+
+  .findbar-find-previous, .findbar-find-next {
+    padding: 4px 4px !important;
+  }
+
   /* sidebar */
   #sidebar-throbber, #sidebar-header > spacer, #sidebar-close, #sidebar-title, #sidebar-switcher-arrow {
     display: none;
