@@ -206,6 +206,13 @@
     padding: var(--bookmark-block-padding) 2px !important;
   }
 
+  #PersonalToolbar .toolbarbutton-1 {
+    --toolbarbutton-inner-padding: 0px !important;
+    --toolbarbutton-outer-padding: 0px !important;
+    margin-block: 0px !important;
+    padding-block: 2px !important;
+  }
+
   /* 透過 */
   /* aboout:config で layout.css.color-mix.enabled を true に */
   @media not (-moz-platform: windows){
