@@ -17,6 +17,7 @@
     --toolbarbutton-inner-padding: 2px !important;
     --inline-tab-padding: 2px !important;
     --bookmark-block-padding: 0px !important;
+    --toolbarbutton-outer-padding: 1px !important;
   }
 
   :root[tabsintitlebar][sizemode="normal"] #titlebar,
@@ -28,9 +29,17 @@
     max-width: none !important;
   }
 
+  #tabbrowser-arrowscrollbox-periphery,
+  #alltabs-button,
+  .titlebar-button.titlebar-min,
+  .titlebar-button.titlebar-max {
+    border-right: 1px solid var(--chrome-content-separator-color) !important;
+  }
+
   .tabbrowser-tab {
     min-height: auto !important;
     padding: 0px !important;
+    border-right: 1px solid var(--chrome-content-separator-color) !important;
   }
 
   .tabbrowser-tab[selected]:not([pinned]) {
@@ -87,6 +96,7 @@
   .titlebar-spacer[type="pre-tabs"],
   .titlebar-spacer[type="post-tabs"] {
     width: var(--tab-min-height) !important;
+    border-right: 1px solid var(--chrome-content-separator-color) !important;
   }
 
   #urlbar-container {
