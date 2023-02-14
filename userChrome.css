@@ -32,7 +32,8 @@
   #tabbrowser-arrowscrollbox-periphery,
   #alltabs-button,
   .titlebar-button.titlebar-min,
-  .titlebar-button.titlebar-max {
+  .titlebar-button.titlebar-max,
+  .titlebar-button.titlebar-restore {
     border-right: 1px solid var(--chrome-content-separator-color) !important;
   }
 
