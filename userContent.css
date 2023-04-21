@@ -4,18 +4,18 @@
 @-moz-document
 url-prefix("about:newtab"),
 url-prefix("about:home") {
-  body {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+  html {
     height: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
+  }
+
+  body {
+    background-position: center;
     background-size: cover;
     background-image: url("./image/wallpaper.png");
   }
 
+  .personalize-button,
+  .customize-menu,
   .search-wrapper .search-handoff-button,
   .search-wrapper input {
     background-color: color-mix(in srgb, transparent 35%, var(--newtab-background-color-secondary)) !important;
