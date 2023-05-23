@@ -3,7 +3,8 @@
 @charset "UTF-8";
 @-moz-document
 url-prefix("about:newtab"),
-url-prefix("about:home") {
+url-prefix("about:home"),
+url-prefix("chrome://browser/content/blanktab.html") {
   html {
     height: 100%;
   }
