@@ -170,6 +170,10 @@
     padding: 4px 4px !important;
   }
 
+  #page-action-buttons > hbox[hidden="true"] {
+    display: none;
+  }
+
   /* sidebar */
   #sidebar-throbber, #sidebar-header > spacer, #sidebar-close, #sidebar-title, #sidebar-switcher-arrow {
     display: none;
