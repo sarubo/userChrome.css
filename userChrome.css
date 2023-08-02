@@ -29,6 +29,11 @@
     max-width: none !important;
   }
 
+  #TabsToolbar > .titlebar-buttonbox-container,
+  #TabsToolbar > .toolbar-items {
+    height: var(--tab-min-height) !important;
+  }
+
   #tabbrowser-arrowscrollbox-periphery,
   #alltabs-button,
   .titlebar-button.titlebar-min,
