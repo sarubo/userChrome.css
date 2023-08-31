@@ -13,7 +13,7 @@
   :root {
     --tab-min-height: 24px !important;
     --tab-block-margin: 1px !important;
-    --urlbar-min-height: 24px !important; 
+    --urlbar-min-height: 24px !important;
     --toolbarbutton-inner-padding: 2px !important;
     --inline-tab-padding: 2px !important;
     --bookmark-block-padding: 0px !important;
@@ -71,6 +71,10 @@
   .tab-sharing-icon-overlay:not([pinned]),
   .tab-icon-overlay:not([pinned]) {
     margin-inline-end: 0px !important;
+  }
+
+  .tab-background {
+    margin-block: 0px !important;
   }
 
   .tab-label {
