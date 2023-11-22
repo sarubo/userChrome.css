@@ -293,7 +293,7 @@ url(chrome://browser/content/places/historySidebar.xhtml) {
 }
 
 @-moz-document url(chrome://browser/content/syncedtabs/sidebar.xhtml) {
-  body[lwt-sidebar] {
+  :root[lwt-sidebar] {
     background-color: transparent !important;
     font-family: sans-serif !important;
   }
