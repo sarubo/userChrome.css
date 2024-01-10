@@ -119,7 +119,12 @@
     --urlbar-container-height: var(--urlbar-min-height) !important;
   }
 
-  #urlbar {
+  #urlbar-container, #search-container {
+    padding-block: 0 !important;
+    margin-inline: 0 !important;
+  }
+
+  #urlbar, #searchbar {
     --urlbar-height: var(--urlbar-min-height) !important;
     --urlbar-toolbar-height: var(--urlbar-height) !important;
     --urlbar-icon-padding: 2px !important;
