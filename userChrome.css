@@ -268,24 +268,26 @@
     background-color: color-mix(in srgb, transparent 35%, var(--toolbar-field-background-color)) !important;
   }
 
-  #navigator-toolbox:-moz-window-inactive:-moz-lwtheme {
-    background-color: color-mix(in srgb, transparent 35%, var(--lwt-accent-color-inactive, var(--lwt-accent-color))) !important;
-  }
-
-  #navigator-toolbox:-moz-lwtheme {
-    background-color: color-mix(in srgb, transparent 35%, var(--lwt-accent-color)) !important;
+  #navigator-toolbox {
+    :root[lwtheme] & {
+      background-color: color-mix(in srgb, transparent 35%, var(--lwt-accent-color)) !important;
+      &:-moz-window-inactive {
+        background-color: color-mix(in srgb, transparent 35%, var(--lwt-accent-color-inactive, var(--lwt-accent-color))) !important;
+      }
+    }
   }
 
   #sidebar-box {
     background-color: color-mix(in srgb, transparent 35%, var(--sidebar-background-color)) !important;
   }
 
-  :root:not([lwtheme-image]) .browserContainer > findbar:-moz-lwtheme:-moz-window-inactive {
-    background-color: color-mix(in srgb, transparent 35%, var(--lwt-accent-color-inactive, var(--lwt-accent-color))) !important;
-  }
-
-  :root:not([lwtheme-image]) .browserContainer > findbar:-moz-lwtheme {
-    background-color: color-mix(in srgb, transparent 35%, var(--lwt-accent-color)) !important;
+  .browserContainer > findbar {
+    :root[lwtheme] & {
+      background-color: transparent !important;
+    }
+    :root[lwtheme]:not([lwtheme-image]) &:-moz-window-inactive {
+      background-color: transparent !important;
+    }
   }
 }
 @-moz-document
