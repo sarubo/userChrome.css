@@ -48,6 +48,7 @@
   min-height: auto !important;
   padding: 0px !important;
   border-right: 1px solid var(--chrome-content-separator-color) !important;
+  height: var(--tab-min-height);
 }
 
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
