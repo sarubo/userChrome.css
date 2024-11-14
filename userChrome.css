@@ -80,6 +80,7 @@
 
 .tab-background {
   margin-block: 0px !important;
+  height: var(--tab-min-height);
 }
 
 .tab-label {
@@ -107,6 +108,10 @@
 
 #TabsToolbar {
   --toolbarbutton-inner-padding: calc(var(--tab-min-height) / 6 - var(--tab-block-margin)) !important;
+}
+
+#TabsToolbar-customization-target {
+  height: var(--tab-min-height);
 }
 
 .titlebar-spacer[type="pre-tabs"],
