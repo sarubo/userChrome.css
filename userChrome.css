@@ -59,11 +59,20 @@
   min-width: calc(var(--tab-min-height) + 22px) !important;
 }
 
+.tabbrowser-tab[soundplaying][selected]:not([pinned]) {
+  /* 最低限の幅、閉じるボタン幅、tab-audio-buttonの調整 */
+  min-width: calc(var(--tab-min-height) + 22px + 21px) !important;
+}
+
+.tab-audio-button {
+  margin-inline-end: 0 !important;
+}
+
 .tabbrowser-tab:not([pinned]) {
   --tab-min-width: calc(var(--tab-min-height)) !important;
 }
 
-.tab-label-container {
+.tabbrowser-tab:not([soundplaying]) .tab-label-container {
   padding-left: 4px;
 }
 
