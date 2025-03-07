@@ -68,6 +68,10 @@
   margin-inline-end: 0 !important;
 }
 
+#tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab[fadein]:not([pinned]):not([selected]) {
+  min-width: var(--tab-min-width) !important;
+}
+
 .tabbrowser-tab:not([pinned]) {
   --tab-min-width: calc(var(--tab-min-height)) !important;
 }
