@@ -27,6 +27,7 @@
   appearance: none !important;
 }
 
+#tabbrowser-arrowscrollbox>.tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]),
 tab-group:not([collapsed])>.tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]) {
   max-width: none !important;
 }
@@ -50,6 +51,7 @@ tab-group:not([collapsed])>.tabbrowser-tab[fadein]:not([pinned]):not([style*="ma
   height: var(--tab-min-height);
 }
 
+#tabbrowser-arrowscrollbox>.tabbrowser-tab,
 tab-group:not([collapsed])>.tabbrowser-tab {
   border-right: 1px solid var(--chrome-content-separator-color) !important;
 }
@@ -58,10 +60,12 @@ tab-group:not([collapsed])>.tabbrowser-tab {
   margin-inline-start: 0px !important;
 }
 
+#tabbrowser-arrowscrollbox>.tabbrowser-tab[selected]:not([pinned]),
 tab-group:not([collapsed])>.tabbrowser-tab[selected]:not([pinned]) {
   min-width: calc(var(--tab-min-height) + 22px) !important;
 }
 
+#tabbrowser-arrowscrollbox>.tabbrowser-tab[soundplaying][selected]:not([pinned]),
 tab-group:not([collapsed])>.tabbrowser-tab[soundplaying][selected]:not([pinned]) {
   /* 最低限の幅、閉じるボタン幅、tab-audio-buttonの調整 */
   min-width: calc(var(--tab-min-height) + 22px + 21px) !important;
@@ -71,10 +75,12 @@ tab-group:not([collapsed])>.tabbrowser-tab[soundplaying][selected]:not([pinned])
   margin-inline-end: 0 !important;
 }
 
+#tabbrowser-tabs[orient="horizontal"] #tabbrowser-arrowscrollbox>.tabbrowser-tab[fadein]:not([pinned]):not([selected]),
 #tabbrowser-tabs[orient="horizontal"] tab-group:not([collapsed])>.tabbrowser-tab[fadein]:not([pinned]):not([selected]) {
   min-width: var(--tab-min-width) !important;
 }
 
+#tabbrowser-arrowscrollbox>.tabbrowser-tab:not([pinned]),
 tab-group:not([collapsed])>.tabbrowser-tab:not([pinned]) {
   --tab-min-width: calc(var(--tab-min-height)) !important;
 }
