@@ -256,8 +256,10 @@ findbar {
 }
 
 .sidebar-splitter {
-  width: 1px !important;
-  background-color: var(--sidebar-border-color) !important;
+  width: 2px !important;
+  background-color: transparent
+    /*var(--sidebar-border-color)*/
+    !important;
   border: 0px !important;
 }
 
@@ -288,8 +290,16 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 /* 透過 */
-/* aboout:config で layout.css.color-mix.enabled を true に */
+/* ~~aboout:config で layout.css.color-mix.enabled を true に~~ */
+/* layout.css.color-mix.enabled は既に標準化されています */
 @media not (-moz-platform: windows) {
+
+  /*
+  * about:config で browser.tabs.allow_transparent_browser を true にして下さい。
+  * about:blank が透過されます。
+  * 以下の情報より
+  * https://www.reddit.com/r/FirefoxCSS/comments/1dqws4b/firefox_128_will_allow_the_main_browser_content/
+  */
   :root {
     background-color: transparent !important;
   }
@@ -297,14 +307,21 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 #tabbrowser-tabpanels {
   background-color: color-mix(in srgb, transparent 35%, var(--lwt-accent-color)) !important;
+  background: transparent !important;
 }
 
-#urlbar:is([focused="true"], [open])>#urlbar-background,
+@media not -moz-pref("sidebar.verticalTabs") {
+  .browser-toolbar:not(.browser-titlebar) {
+    background-color: color-mix(in srgb, transparent 35%, var(--toolbar-bgcolor)) !important;
+  }
+}
+
+.urlbar:is([focused], [open])>.urlbar-background,
 #searchbar:focus-within {
   background-color: color-mix(in srgb, transparent 35%, var(--toolbar-field-focus-background-color)) !important;
 }
 
-#urlbar-background,
+.urlbar-background,
 #searchbar {
   background-color: color-mix(in srgb, transparent 35%, var(--toolbar-field-background-color)) !important;
 }
@@ -322,29 +339,47 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #browser:not(.browser-toolbox-background) {
   :root[lwtheme] & {
     background-color: color-mix(in srgb, transparent 35%, var(--sidebar-background-color)) !important;
+    background-image: none !important;
   }
 }
 
-#sidebar-box {
-  background-color: transparent !important;
+@media not -moz-pref("sidebar.revamp") {
+
+  #sidebar-main,
+  #sidebar-box {
+    background-color: transparent !important;
+  }
 }
 
 .browserContainer>findbar {
+  background-color: transparent !important;
+
   :root[lwtheme] & {
     background-color: transparent !important;
+    background-image: none !important;
   }
 
   :root[lwtheme]:not([lwtheme-image]) &:-moz-window-inactive {
     background-color: transparent !important;
+    background-image: none !important;
   }
 }
+
+.findbar-textbox:focus {
+  background-color: color-mix(in srgb, transparent 80%, var(--toolbar-field-focus-background-color)) !important;
 }
+
 
 @-moz-document url(chrome://browser/content/places/bookmarksSidebar.xhtml),
 url(chrome://browser/content/places/historySidebar.xhtml){
 .sidebar-panel[lwt-sidebar] {
   background-color: transparent !important;
   font-family: sans-serif !important;
+}
+
+#input {
+  min-height: 20px !important;
+  background-color: transparent !important;
 }
 }
 
