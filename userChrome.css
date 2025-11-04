@@ -368,7 +368,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 .findbar-textbox:focus {
   background-color: color-mix(in srgb, transparent 80%, var(--toolbar-field-focus-background-color)) !important;
 }
-
+}
 
 @-moz-document url(chrome://browser/content/places/bookmarksSidebar.xhtml),
 url(chrome://browser/content/places/historySidebar.xhtml){
