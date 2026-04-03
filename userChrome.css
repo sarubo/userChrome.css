@@ -224,7 +224,8 @@ findbar {
   padding: 4px 4px !important;
 }
 
-#page-action-buttons>hbox[hidden="true"] {
+#page-action-buttons>hbox[hidden="true"],
+#page-action-buttons>hbox[hidden] {
   display: none;
 }
 
