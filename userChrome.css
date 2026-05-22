@@ -20,11 +20,7 @@
   --tab-inline-padding: 2px !important;
   --bookmark-block-padding: 0px !important;
   --toolbarbutton-padding-outer: 1px !important;
-}
-
-:root[tabsintitlebar][sizemode="normal"] #titlebar,
-:root[tabsintitlebar][sizemode="maximized"] #titlebar {
-  appearance: none !important;
+  --urlbarView-row-padding-block: 0px !important;
 }
 
 #tabbrowser-arrowscrollbox>.tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]),
