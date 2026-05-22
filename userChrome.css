@@ -16,10 +16,10 @@
   --tab-min-height: 24px !important;
   --tab-block-margin: 1px !important;
   --urlbar-min-height: 24px !important;
-  --toolbarbutton-inner-padding: 2px !important;
+  --toolbarbutton-padding-inner: 2px !important;
   --tab-inline-padding: 2px !important;
   --bookmark-block-padding: 0px !important;
-  --toolbarbutton-outer-padding: 1px !important;
+  --toolbarbutton-padding-outer: 1px !important;
 }
 
 :root[tabsintitlebar][sizemode="normal"] #titlebar,
@@ -313,18 +313,18 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 @media not -moz-pref("sidebar.verticalTabs") {
   .browser-toolbar:not(.browser-titlebar) {
-    background-color: color-mix(in srgb, transparent 35%, var(--toolbar-bgcolor)) !important;
+    background-color: color-mix(in srgb, transparent 35%, var(--lwt-accent-color)) !important;
   }
 }
 
 .urlbar:is([focused], [open])>.urlbar-background,
 #searchbar:focus-within {
-  background-color: color-mix(in srgb, transparent 35%, var(--toolbar-field-focus-background-color)) !important;
+  background-color: color-mix(in srgb, transparent 35%, var(--lwt-accent-color)) !important;
 }
 
 .urlbar-background,
 #searchbar {
-  background-color: color-mix(in srgb, transparent 35%, var(--toolbar-field-background-color)) !important;
+  background-color: color-mix(in srgb, transparent 35%, var(--lwt-accent-color)) !important;
 }
 
 #navigator-toolbox {
@@ -352,6 +352,10 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   }
 }
 
+.browserContainer {
+  background: transparent !important;
+}
+
 .browserContainer>findbar {
   background-color: transparent !important;
 
@@ -367,7 +371,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 .findbar-textbox:focus {
-  background-color: color-mix(in srgb, transparent 80%, var(--toolbar-field-focus-background-color)) !important;
+  background-color: color-mix(in srgb, transparent 80%, var(--lwt-accent-color)) !important;
 }
 }
 
