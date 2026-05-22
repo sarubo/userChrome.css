@@ -23,6 +23,14 @@
   --urlbarView-row-padding-block: 0px !important;
 }
 
+body {
+  background-color: transparent !important;
+
+  &:-moz-window-inactive {
+    background-color: transparent !important;
+  }
+}
+
 #tabbrowser-arrowscrollbox>.tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]),
 tab-group:not([collapsed])>.tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]) {
   max-width: none !important;
@@ -309,7 +317,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 @media not -moz-pref("sidebar.verticalTabs") {
   .browser-toolbar:not(.browser-titlebar) {
-    background-color: color-mix(in srgb, transparent 35%, var(--lwt-accent-color)) !important;
+    background-color: transparent !important;
   }
 }
 
@@ -320,7 +328,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 .urlbar-background,
 #searchbar {
-  background-color: color-mix(in srgb, transparent 35%, var(--lwt-accent-color)) !important;
+  background-color: color-mix(in srgb, transparent 35%, var(--toolbar-field-background-color)) !important;
 }
 
 #navigator-toolbox {
