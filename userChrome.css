@@ -47,6 +47,7 @@ tab-group:not([collapsed])>.tabbrowser-tab[fadein]:not([pinned]):not([style*="ma
 .titlebar-button.titlebar-max,
 .titlebar-button.titlebar-restore {
   border-right: 1px solid var(--chrome-content-separator-color) !important;
+  height: var(--tab-min-height) !important;
 }
 
 .tabbrowser-tab {
