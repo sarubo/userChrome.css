@@ -23,12 +23,29 @@
   --urlbarView-row-padding-block: 0px !important;
 }
 
+:root {
+  @media -moz-pref("browser.nova.enabled") {
+    &[uidensity="compact"] {
+      --tab-margin-block: 0px !important;
+    }
+  }
+}
+
 body {
   background-color: transparent !important;
 
   &:-moz-window-inactive {
     background-color: transparent !important;
   }
+}
+
+tab-group>.tab-group-label-container {
+  height: var(--tab-min-height) !important;
+}
+
+#tabbrowser-tabs[orient="horizontal"] tab-split-view-wrapper {
+  /* margin-block: var(--tab-margin-block); */
+  padding: 0 0 !important;
 }
 
 #tabbrowser-arrowscrollbox>.tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]),
@@ -185,6 +202,14 @@ moz-button.searchmode-switcher.chromeclass-toolbar-additional {
   padding: 0px !important;
 }
 
+#trust-icon-tracker-count-shortform {
+  margin-inline: 0 !important;
+}
+
+#trust-icon-tracker-count-shortform-wrapper {
+  padding-inline: 0 !important;
+}
+
 .titlebar-spacer {
   max-height: var(--tab-min-height);
 }
@@ -205,6 +230,28 @@ moz-button.searchmode-switcher.chromeclass-toolbar-additional {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* #panel-3-1 > .browserContainer {
+  border-start-start-radius: 0px !important;
+} */
+
+@media -moz-pref("browser.nova.enabled") {
+  #tabbrowser-tabpanels> :not(.split-view-panel) .browserContainer {
+
+    :root:not([inDOMFullscreen]) #tabbrowser-tabbox:not([sidebar-positionend]):is([sidebar-shown], [sidebar-panel-open]) &,
+    :root:not([inDOMFullscreen]) #tabbrowser-tabbox[sidebar-positionend][ai-window-open] & {
+      /* border-inline-start: var(--border-width) solid var(--chrome-content-separator-color);
+      border-start-start-radius: var(--content-area-start-radius); */
+      border-start-start-radius: 0px !important;
+      border-inline-start: 0px solid var(--chrome-content-separator-color) !important;
+    }
+  }
+}
+
+#sidebar-box {
+  border-start-start-radius: 0px !important;
+  border-start-end-radius: 0px !important;
 }
 
 /* search bar */
